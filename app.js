@@ -55,7 +55,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose.
-    connect('mongodb+srv://Carl:Okami1928@cluster0-hvut0.mongodb.net/messages?retryWrites=true&w=majority')
+    connect('mongodb+srv://Carl:<Password>@cluster0-hvut0.mongodb.net/messages?retryWrites=true&w=majority')
     .then(result => {
         const server = app.listen(8080);
         const io = require('./socket').init(server);
